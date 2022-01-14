@@ -19,10 +19,15 @@
     <script src="./resources/vendor/js/bootstrap.min.js" ></script>
     <script src="./resources/vendor/js/popper.min.js" ></script>
 
-    <!-- Chart Javascript Library need for graphs -->
+    <!-- Javascript Library need for graphs - CHART.js -->
     <script src="./resources/vendor/chart js/chart.min.js"></script>
     <script src="./resources/vendor/chart js/chart.esm.min.js"></script>
     <script src="./resources/vendor/chart js/helpers.esm.min.js"></script>
+
+
+    <!-- Go JS needed for showing node type data structure -->
+    <script src="./resources/vendor/goJS/go.js"></script>
+    <script src="./resources/vendor/goJS/DoubleTreeLayout.js"></script>
 
 
 
@@ -34,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
-                 <img alt="logo" src="./resources/main/images/logo.png">  
+                 <img alt="logo" src="./resources/main/assets/logo_with_text.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,7 +58,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="./graph.html">Graph</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropstart">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Action</a>
@@ -70,28 +75,121 @@
      <!-- End of Header  -->
 
 
-     <!-- Start of Line Chart -->
-     <div class="container my-5">
-         <h2 class="my-4 mt-5">Line Chart</h2>
-        <canvas id="lineChart"></canvas>
-    </div>
-    <!-- End of Line Chart -->
+     <!-- Start of 3 Graphs -->
+     <div class="container">
+         <div class="row">
+            <!-- Start of Line Chart -->
+            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
+                <h2 class="my-4 mt-5">Line Chart</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <!-- End of Line Chart -->
+    
+            <!-- Start of Bar Chart -->
+            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
+                <h2 class="my-4 mt-5">Bar Chart</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+            <!-- End of Bar Chart -->
+    
+    
+            <!-- Start of Pie Chart -->
+            <div class="col-12 col-md-6 col-lg-3 mx-lg-3">
+                <h2 class="my-4 mt-5">Pie Chart</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <!-- End of Pie Chart -->
+    
+         </div>
+     </div>
+    <!-- End of 3 Graphs -->
 
-    <!-- Start of Bar Chart -->
-     <div class="container my-5">
-         <h2 class="my-4 mt-5">Bar Chart</h2>
-        <canvas id="barChart"></canvas>
-    </div>
-    <!-- End of Bar Chart -->
+    <!-- Start of Node like data structure diagram - GoJS -->
+     <div class="container mt-5">
+         <h2>Node Structure</h2>
+         <!-- Start of GoJS sample code -->
+            <div class="p-4 w-full">
+                <script id="code">
+                    function init() {
+                        var $ = go.GraphObject.make // for conciseness in defining templates in this function
 
+                        myDiagram = $(go.Diagram, 'myDiagramDiv', {
+                            layout: $(DoubleTreeLayout, {
+                            //vertical: true,  // default directions are horizontal
+                            // choose whether this subtree is growing towards the right or towards the left:
+                            directionFunction: function (n) {
+                                return n.data && n.data.dir !== 'left'
+                            },
+                            // controlling the parameters of each TreeLayout:
+                            //bottomRightOptions: { nodeSpacing: 0, layerSpacing: 20 },
+                            //topLeftOptions: { alignment: go.TreeLayout.AlignmentStart },
+                            }),
+                        })
 
-    <!-- Start of Pie Chart -->
-     <div class="container my-5">
-         <h2 class="my-4 mt-5">Pie Chart</h2>
-        <canvas id="pieChart"></canvas>
-    </div>
-    <!-- End of Pie Chart -->
+                        // define all of the gradient brushes
+                        var graygrad = $(go.Brush, 'Linear', { 0: '#F5F5F5', 1: '#F1F1F1' })
+                        var bluegrad = $(go.Brush, 'Linear', { 0: '#CDDAF0', 1: '#91ADDD' })
+                        var yellowgrad = $(go.Brush, 'Linear', { 0: '#FEC901', 1: '#FEA200' })
+                        var lavgrad = $(go.Brush, 'Linear', { 0: '#EF9EFA', 1: '#A570AD' })
 
+                        myDiagram.nodeTemplate = $(
+                            go.Node,
+                            'Auto',
+                            { isShadowed: true },
+                            // define the node's outer shape
+                            $(
+                            go.Shape,
+                            'RoundedRectangle',
+                            { fill: graygrad, stroke: '#D8D8D8' }, // default fill is gray
+                            new go.Binding('fill', 'color')
+                            ),
+                            // define the node's text
+                            $(
+                            go.TextBlock,
+                            { margin: 5, font: 'bold 11px Helvetica, bold Arial, sans-serif' },
+                            new go.Binding('text', 'key')
+                            )
+                        )
+
+                        myDiagram.linkTemplate = $(
+                            go.Link, // the whole link panel
+                            { selectable: false },
+                            $(go.Shape)
+                        ) // the link shape
+
+                        // create the model for the double tree; could be eiher TreeModel or GraphLinksModel
+                        myDiagram.model = new go.TreeModel([
+                            { key: 'Root', color: lavgrad },
+                            { key: 'Left1', parent: 'Root', dir: 'left', color: bluegrad },
+                            { key: 'leaf1', parent: 'Left1' },
+                            { key: 'leaf2', parent: 'Left1' },
+                            { key: 'Left2', parent: 'Left1', color: bluegrad },
+                            { key: 'leaf3', parent: 'Left2' },
+                            { key: 'leaf4', parent: 'Left2' },
+                            { key: 'leaf5', parent: 'Left1' },
+                            { key: 'Right1', parent: 'Root', dir: 'right', color: yellowgrad },
+                            { key: 'Right2', parent: 'Right1', color: yellowgrad },
+                            { key: 'leaf11', parent: 'Right2' },
+                            { key: 'leaf12', parent: 'Right2' },
+                            { key: 'leaf13', parent: 'Right2' },
+                            { key: 'leaf14', parent: 'Right1' },
+                            { key: 'leaf15', parent: 'Right1' },
+                            { key: 'Right3', parent: 'Root', dir: 'right', color: yellowgrad },
+                            { key: 'leaf16', parent: 'Right3' },
+                            { key: 'leaf17', parent: 'Right3' },
+                        ])
+                    }
+                    window.addEventListener('DOMContentLoaded', init)
+
+                </script>
+                
+                <div id="sample">
+                    <div id="myDiagramDiv" style="background-color: white; border: solid 1px black; width: 100%; height: 500px"></div>
+                </div>
+            </div>
+        <!--  End of GoJS sample code  -->
+     </div>
+    <!-- End of Node like data structure diagram - GoJS -->
 
 
     <!-- Start of Footer  -->
@@ -112,132 +210,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- Line chart -->
-    <script>
-        const labels = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-        ];
-
-        const data = {
-            labels: labels,
-            datasets: [{
-            label: 'Line dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            // backgroundColor corresponds to line color
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
-            // data: dots on the graph
-            }]
-        };
-
-        const config = {
-            type: 'line',
-            data: data,
-            options: {}
-        };
-
-
-        const myChart = new Chart(
-            document.getElementById('lineChart'),
-            config
-        );
-    </script>
-
-
-    <!-- Bar Chart -->
-    <script>
-        const labels2 = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-        ];
-        
-        const data2 = {
-        labels: labels2,
-        datasets: [{
-            label: 'Bar Dataset',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-            ],
-            borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1
-        }]
-        };
-
-        const config2 = {
-            type: 'bar',
-            data: data2,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            },
-        };
-
-        const myChart2 = new Chart(
-            document.getElementById('barChart'),
-            config2
-        );
-    </script>
-
-
-    <!-- Pie Chart -->
-    <script>
-        const data3 = {
-            labels: [
-                'Red',
-                'Blue',
-                'Yellow'
-            ],
-            datasets: [{
-                label: 'Pie Dataset',
-                data: [300, 50, 100],
-                backgroundColor: [
-                'rgb(255, 99, 160)',
-                'rgb(10, 162, 235)',
-                'rgb(255, 205, 86)'
-                ],
-                hoverOffset: 4
-            }]
-        };
-
-        const config3 = {
-            type: 'pie',
-            data: data3,
-        };
-
-        const myChart3 = new Chart(
-            document.getElementById('pieChart'),
-            config3
-        );
-
-    </script>
-
+    <!-- Drawing graphs -->
+    <script src="./resources/main/js/graph.js"></script>
 
 </body>
 </html>

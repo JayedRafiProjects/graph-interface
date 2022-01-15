@@ -23,7 +23,7 @@ function init() {
   myDiagram.nodeTemplate = $(
     go.Node,
     'Auto',
-    { isShadowed: true },
+    { isShadowed: false },
     // define the node's outer shape
     $(
       go.Shape,

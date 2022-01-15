@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signal Analysis - Home </title>
+    <title>Signal Analysis - Radio Frequency</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/jpg" href="./resources/main/images/favicon.ico">
@@ -18,18 +18,6 @@
     <!-- Javascript needed for bootstrap -->
     <script src="./resources/vendor/js/bootstrap.min.js" ></script>
     <script src="./resources/vendor/js/popper.min.js" ></script>
-    
-    <!-- Javascript Library need for graphs - CHART.js -->
-    <script src="./resources/vendor/chart js/chart.min.js"></script>
-    <script src="./resources/vendor/chart js/chart.esm.min.js"></script>
-    <script src="./resources/vendor/chart js/helpers.esm.min.js"></script>
-
-
-    <!-- Go JS needed for showing node type data structure -->
-    <script src="./resources/vendor/goJS/go.js"></script>
-    <script src="./resources/vendor/goJS/DoubleTreeLayout.js"></script>
-    <script src="./resources/main/js/goJS-node.js"></script>
-
 
 </head>
 <body>
@@ -56,12 +44,12 @@
                     <a class="nav-link" href="./code.html">Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="./graph.html">Graph</a>
+                    <a class="nav-link" href="./graph.html">Graph</a>
                 </li>
                 <li class="nav-item dropstart">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More/a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="./software.html">Software</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                         <div class="dropdown-divider"></div>
@@ -74,48 +62,42 @@
     </nav>
      <!-- End of Header  -->
 
+    <div class="container my-5">
+        <h2 class="text-center my-5">Radio Frequency – System Analysis Software </h2>
+        
+        <nav style="--bs-breadcrumb-divider: '/';"  aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./software.html">Software</a></li>
+                <li class="breadcrumb-item"><a href="#">Test 1 </a></li>
+                <li class="breadcrumb-item"><a href="#">Test 2 </a></li>
+                <li class="breadcrumb-item"><a href="#">Test 3 </a></li>
+                <li class="breadcrumb-item"><a href="#">Test 4 </a></li>
+                <li class="breadcrumb-item"><a href="#"> Final </a></li>
+                <li class="breadcrumb-item"><a href="./credits.html"> Credits </a></li>
+            </ol>
+        </nav>
 
-     <!-- Start of 3 Graphs -->
-     <div class="container">
-         <div class="row">
-            <!-- Start of Line Chart -->
-            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
-                <h2 class="my-4 mt-5">Line Chart</h2>
-                <canvas id="lineChart"></canvas>
-            </div>
-            <!-- End of Line Chart -->
+        <p class="lead">
+            <ol>
+                <li class="lead mt-3">
+                    Scarpati, Jessica. “What Is Radio Frequency (RF, RF)? - Definition from Whatis.com.”
+                SearchNetworking. TechTarget, February 25, 2021.
+                https://www.techtarget.com/searchnetworking/definition/radio-frequency. 
+                </li>
+                <li class="lead mt-3">
+                    “Radio Frequency.” n.d. Www.cs.mcgill.ca.
+                    https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/r/Radio_frequency.htm.
+                </li>
+                <li class="lead mt-3">
+                    Wikipedia Contributors. 2019. “Radio Spectrum.” Wikipedia. Wikimedia
+                    Foundation. November 15, 2019.
+                    https://en.wikipedia.org/wiki/Radio_spectrum.
+                </li>
+            </ol>
+        </p>
     
-            <!-- Start of Bar Chart -->
-            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
-                <h2 class="my-4 mt-5">Bar Chart</h2>
-                <canvas id="barChart"></canvas>
-            </div>
-            <!-- End of Bar Chart -->
-    
-    
-            <!-- Start of Pie Chart -->
-            <div class="col-12 col-md-6 col-lg-3 mx-lg-3">
-                <h2 class="my-4 mt-5">Pie Chart</h2>
-                <canvas id="pieChart"></canvas>
-            </div>
-            <!-- End of Pie Chart -->
-    
-         </div>
-     </div>
-    <!-- End of 3 Graphs -->
+    </div>
 
-    <!-- Start of Node like data structure diagram - GoJS -->
-     <div class="container mt-5">
-         <h2>Node Structure</h2>
-         <!-- Start of GoJS sample code -->
-            <div class="p-4 w-full">
-                <div id="sample">
-                    <div id="myDiagramDiv" style="background-color: white; border: solid 1px black; width: 100%; height: 500px"></div>
-                </div>
-            </div>
-        <!--  End of GoJS sample code  -->
-     </div>
-    <!-- End of Node like data structure diagram - GoJS -->
 
 
     <!-- Start of Footer  -->
@@ -135,9 +117,6 @@
     <!-- Custom icons - Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!-- Drawing graphs -->
-    <script src="./resources/main/js/graph.js"></script>
 
 </body>
 </html>

@@ -32,7 +32,7 @@ public class GUI extends JPanel {
     private static final int B_TPADDING = 50;//Button Y-padding
     private static final int B_INTERVAL = (350-(4*B_HEIGHT))/6;//Button in-between intervals
     private final int Y_GRID = 35;//Num of horizontal grid
-    private final int X_GRID = 110;//num of vertical grid
+    private final int X_GRID = 110;//num of vertical grid 
     private final int POINT_INDICATOR_LENGTH = 5;
 
     //Simulation value range

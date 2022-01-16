@@ -1,17 +1,10 @@
-import com.sun.jdi.PrimitiveValue;
-
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Point;
 import java.awt.RenderingHints;
-import java.awt.Stroke;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.Collections;
@@ -133,11 +126,16 @@ public class GUI extends JPanel {
         double perPixelX = (Math.abs(xMin)+Math.abs(xMax))/W_FRAME;
         double perPixelY = (Math.abs(yMin)+Math.abs(yMax))/H_FRAME;
         for(int i=0; i<quantity-1; i++){
-            x1 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i)/perPixelX);
-            x2 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i+1)/perPixelX);
+            if(Collections.min(xAxis)<0){
+                x1 = (int)(WIDTH-L_PADDING-W_FRAME+(xAxis.get(i)+Math.abs(Collections.min(xAxis)))/perPixelX);
+                x2 = (int)(WIDTH-L_PADDING-W_FRAME+(xAxis.get(i+1)+Math.abs((Collections.min(xAxis))))/perPixelX);
+            }else{
+                x1 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i)/perPixelX);
+                x2 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i+1)/perPixelX);
+            }
             if(Collections.min(yAxis)<0){
-                y1 = (int)(T_PADDING+H_FRAME/2-yAxis.get(i)/perPixelY);
-                y2 = (int)(T_PADDING+H_FRAME/2-yAxis.get(i+1)/perPixelY);
+                y1 = (int)(T_PADDING+H_FRAME-(yAxis.get(i)+Math.abs(Collections.min(yAxis)))/perPixelY);
+                y2 = (int)(T_PADDING+H_FRAME-(yAxis.get(i+1)+Math.abs(Collections.min(yAxis)))/perPixelY);
             }else{
                 y1 = (int)(T_PADDING+H_FRAME-yAxis.get(i)/perPixelY);
                 y2 = (int)(T_PADDING+H_FRAME-yAxis.get(i+1)/perPixelY);

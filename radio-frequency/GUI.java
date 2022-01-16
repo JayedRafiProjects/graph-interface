@@ -1,3 +1,5 @@
+import com.sun.jdi.PrimitiveValue;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 import javax.swing.*;
 import java.text.DecimalFormat;
+import java.util.Collections;
 
 public class GUI extends JPanel {
 
@@ -32,21 +35,24 @@ public class GUI extends JPanel {
     private static final int B_TPADDING = 50;//Button Y-padding
     private static final int B_INTERVAL = (350-(4*B_HEIGHT))/6;//Button in-between intervals
     private final int Y_GRID = 35;//Num of horizontal grid
-    private final int X_GRID = 110;//num of vertical grid 
+    private final int X_GRID = 110;//num of vertical grid
     private final int POINT_INDICATOR_LENGTH = 5;
 
     //Simulation value range
     DecimalFormat dFormat = new DecimalFormat("#.##");//Format up to 2 decimal
     private Double xMin = 0.0;
-    private Double yMin = -1312.22;
+    private Double yMin = 0.0;
     private Double xMax = 1000.0;
-    private Double yMax =1000.0;
+    private Double yMax = 1000.0;
+    private int quantity;
 
     //Containers
-    private List<Double>inValue; //Received value
+    private List<Double>xAxis;
+    private List<Double>yAxis;
 
-    public GUI(List<Double>inValue){
-        this.inValue = inValue;
+    public GUI(List<Double>xAxis, List<Double>yAxis){
+        this.xAxis = xAxis;
+        this.yAxis = yAxis;
     }//end GUI
 
     protected void paintComponent(Graphics gph){
@@ -58,6 +64,13 @@ public class GUI extends JPanel {
         g2D.setColor(Color.WHITE);
         g2D.fillRect(WIDTH-L_PADDING-W_FRAME, T_PADDING, W_FRAME, H_FRAME);
         g2D.setColor(Color.BLACK);
+
+        //Initialize max min val
+        quantity = xAxis.size();
+        xMax = Collections.max(xAxis);
+        xMin = Collections.min(xAxis);
+        yMax = Collections.max(yAxis);
+        yMin = Collections.min(yAxis);
 
         //Y-grid
         int xIn, yIn, xFin, yFin; //x & y coordinates
@@ -102,6 +115,8 @@ public class GUI extends JPanel {
             if(i%X_POINT_INTERVAL==0){
                 g2D.setColor(Color.BLACK);
                 g2D.drawString(point, xIn-labelWidth/2-2, T_PADDING+H_FRAME+metrics.getHeight()+2);//Point
+            }
+            if(i%Y_POINT_INTERVAL==0){
                 g2D.setColor(Color.blue);
                 g2D.drawLine(xIn, yFin-POINT_INDICATOR_LENGTH, xFin, yFin);//Point indicator
             }
@@ -113,20 +128,30 @@ public class GUI extends JPanel {
         g2D.drawLine(WIDTH-L_PADDING-W_FRAME, T_PADDING+H_FRAME, WIDTH-L_PADDING-W_FRAME+W_FRAME,T_PADDING+H_FRAME);//y
         g2D.drawLine(WIDTH-L_PADDING-W_FRAME,yIn,WIDTH-L_PADDING-W_FRAME,yFin);//x
 
+        //Graph Simulation
+        int x1, y1, x2, y2;
+        double perPixelX = (Math.abs(xMin)+Math.abs(xMax))/W_FRAME;
+        double perPixelY = (Math.abs(yMin)+Math.abs(yMax))/H_FRAME;
+        for(int i=0; i<quantity-1; i++){
+            x1 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i)/perPixelX);
+            x2 = (int)(WIDTH-L_PADDING-W_FRAME+xAxis.get(i+1)/perPixelX);
+            if(Collections.min(yAxis)<0){
+                y1 = (int)(T_PADDING+H_FRAME/2-yAxis.get(i)/perPixelY);
+                y2 = (int)(T_PADDING+H_FRAME/2-yAxis.get(i+1)/perPixelY);
+            }else{
+                y1 = (int)(T_PADDING+H_FRAME-yAxis.get(i)/perPixelY);
+                y2 = (int)(T_PADDING+H_FRAME-yAxis.get(i+1)/perPixelY);
+            }
+
+            g2D.setColor(Color.blue);
+            g2D.drawLine(x1, y1, x2, y2);
+        }
+
     }//end simulateGraph
 
     private static void processGUI() {
-        //-------------------------------
-        List<Double> scores = new ArrayList<>();
-        Random random = new Random();
-        int maxDataPoints = 40;
-        int maxScore = 10;
-        for (int i = 0; i < maxDataPoints; i++) {
-            scores.add((double) random.nextDouble() * maxScore);
-//            scores.add((double) i);
-        }
-        //----------------------------------------------
-        GUI gFrame = new GUI(scores);
+        Process system = new Process();
+        GUI gFrame = new GUI(system.xList(),system.yList());
         gFrame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         JFrame frame = new JFrame("Radio Frequency - System Analysis Software");
 

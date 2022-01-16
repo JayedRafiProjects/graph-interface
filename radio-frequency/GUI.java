@@ -30,7 +30,8 @@ public class GUI extends JPanel {
     private static final int B_XPADDING = (WIDTH-50-1100-B_WIDTH)/2;//Button x-padding; (WIDTH-L_PADDING-W_FRAME-B-WIDTH)/2
     private static final int B_TPADDING = 50;//Button Y-padding
     private static final int B_INTERVAL = (350-(4*B_HEIGHT))/6;//Button in-between intervals
-    private final int Y_GRID = 20;
+    private final int Y_GRID = 35;
+    private final int X_GRID = 110;
 
     //Containers
     private List<Double>inValue; //Received value
@@ -50,8 +51,26 @@ public class GUI extends JPanel {
         g2D.setColor(Color.BLACK);
 
         //Y-grid
-        for(int i=0; i<Y_GRID;i++){
-            int xIn =
+        int xIn, yIn, xFin, yFin; //x & y coordinates
+        int gridInterval;
+        xIn = WIDTH-L_PADDING-W_FRAME;
+        gridInterval = H_FRAME/Y_GRID;
+        xFin = xIn+W_FRAME;
+        g2D.setColor(GRID_COLOR);
+        for(int i=0; i<Y_GRID; i++){
+            yIn = yFin = T_PADDING+i*gridInterval;
+            g2D.drawLine(xIn, yIn, xFin, yFin);
+        }
+
+        //X-grid
+        //Re-use Y-grid variables
+        yIn = T_PADDING;
+        yFin=yIn+H_FRAME;
+        gridInterval = W_FRAME/X_GRID;
+        for(int i=1; i<=X_GRID; i++){
+            xIn = WIDTH-L_PADDING-W_FRAME+i*gridInterval;
+            xFin = xIn;
+            g2D.drawLine(xIn, yIn, xFin, yFin);
         }
 
     }//end simulateGraph

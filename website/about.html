@@ -18,18 +18,6 @@
     <!-- Javascript needed for bootstrap -->
     <script src="./resources/vendor/js/bootstrap.min.js" ></script>
     <script src="./resources/vendor/js/popper.min.js" ></script>
-    
-    <!-- Javascript Library need for graphs - CHART.js -->
-    <script src="./resources/vendor/chart js/chart.min.js"></script>
-    <script src="./resources/vendor/chart js/chart.esm.min.js"></script>
-    <script src="./resources/vendor/chart js/helpers.esm.min.js"></script>
-
-
-    <!-- Go JS needed for showing node type data structure -->
-    <script src="./resources/vendor/goJS/go.js"></script>
-    <script src="./resources/vendor/goJS/DoubleTreeLayout.js"></script>
-    <script src="./resources/main/js/goJS-node.js"></script>
-
 
 </head>
 <body>
@@ -57,7 +45,7 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="./software.html">Software</a>
-                        <a class="dropdown-item" href="./credits.html">Credits</a>
+                         <a class="dropdown-item" href="./credits.html">Credits</a>
                     </div>
                 </li>
 
@@ -65,10 +53,10 @@
                     <a class="nav-link" href="./code.html">Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="./graph.html">Graph</a>
+                    <a class="nav-link" href="./graph.html">Graph</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="./about.html">About Us</a>
+                    <a class="nav-link active" href="./about.html">About Us</a>
                 </li>
             </ul>
             </div>
@@ -77,47 +65,50 @@
      <!-- End of Header  -->
 
 
-     <!-- Start of 3 Graphs -->
-     <div class="container">
-         <div class="row">
-            <!-- Start of Line Chart -->
-            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
-                <h2 class="my-4 mt-5">Line Chart</h2>
-                <canvas id="lineChart"></canvas>
+    <div class="container my-5">
+        <h1>Meet us</h1>
+        
+        <!-- Start of 1st Profile -->
+        <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+            <div class="col-12 col-md-4">
+                <img class="rounded-circle" src="./resources/main/assets/jayed_profile.jfif" alt="jayed_profile" srcset="">
             </div>
-            <!-- End of Line Chart -->
-    
-            <!-- Start of Bar Chart -->
-            <div class="col-12 col-md-6 col-lg-4 mx-lg-3">
-                <h2 class="my-4 mt-5">Bar Chart</h2>
-                <canvas id="barChart"></canvas>
-            </div>
-            <!-- End of Bar Chart -->
-    
-    
-            <!-- Start of Pie Chart -->
-            <div class="col-12 col-md-6 col-lg-3 mx-lg-3">
-                <h2 class="my-4 mt-5">Pie Chart</h2>
-                <canvas id="pieChart"></canvas>
-            </div>
-            <!-- End of Pie Chart -->
-    
-         </div>
-     </div>
-    <!-- End of 3 Graphs -->
 
-    <!-- Start of Node like data structure diagram - GoJS -->
-     <div class="container mt-5">
-         <h2>Node Structure</h2>
-         <!-- Start of GoJS sample code -->
-            <div class="p-4 w-full">
-                <div id="sample">
-                    <div id="myDiagramDiv" style="background-color: white; border: solid 1px black; width: 100%; height: 500px"></div>
-                </div>
+            <div class="col-12 col-md-8">
+                <h3>Jayed Rafi</h3>
+                <p class="lead">Software Development</p>
+                <a class="text-light btn btn-success" href="https://jayedrafi.com/" target="blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                <div></div>
+                <a class="text-light btn btn-dark mt-2" href="https://github.com/JayedRafiProjects" target="blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                <div></div>
+                <a class="text-light btn btn-info mt-2" href="https://www.linkedin.com/in/jayed-rafi/" target="blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
             </div>
-        <!--  End of GoJS sample code  -->
-     </div>
-    <!-- End of Node like data structure diagram - GoJS -->
+        </div>
+        <!-- End of 1st Profile -->
+
+
+        <!-- Start of 2nd Profile -->
+        <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+            <div class="col-12 col-md-4">
+                <img class="rounded-circle" src="./resources/main/assets/jashan_profile.jfif" alt="jayed_profile" srcset="">
+            </div>
+
+            <div class="col-12 col-md-8 mt-5">
+                <h3>Jashanjot Singh Gill</h3>
+                <p class="lead">Web Development</p>
+                <a class="text-light btn btn-success" href="https://jashann.github.io" target="blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                <div></div>
+                <a class="text-light btn btn-dark mt-2" href="https://github.com/Jashann" target="blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                <div></div>
+                <a class="text-light btn btn-info mt-2" href="https://www.linkedin.com/in/jashan7/" target="blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+            </div>
+        </div>
+        <!-- End of 2nd Profile -->
+
+    </div>
+    
+
+
 
 
     <!-- Start of Footer  -->
@@ -137,9 +128,6 @@
     <!-- Custom icons - Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!-- Drawing graphs -->
-    <script src="./resources/main/js/graph.js"></script>
 
 </body>
 </html>

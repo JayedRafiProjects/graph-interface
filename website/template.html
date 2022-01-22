@@ -12,6 +12,9 @@
     <!-- Custom bootstrap -->
     <link rel="stylesheet" href="./resources/vendor/css/bootstrap.min.css">
 
+    <!-- Main css -->
+    <link rel="stylesheet" href="./resources/main/css/style.css">
+
     <!-- Javascript needed for bootstrap -->
     <script src="./resources/vendor/js/bootstrap.min.js" ></script>
     <script src="./resources/vendor/js/popper.min.js" ></script>
@@ -24,7 +27,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
-                 <img alt="logo" src="./resources/main/images/logo.png">  
+                 <img alt="logo" src="./resources/main/assets/logo_with_text.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,25 +36,27 @@
             <div class="collapse navbar-collapse text-center mt-4 mt-md-0" id="navbarColor01">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                <a class="nav-link active" href="#">Home
-                    <span class="visually-hidden">(current)</span>
-                </a>
+                    <a class="nav-link active" href="./index.html">Home
+                        <span class="visually-hidden">(current)</span>
+                    </a>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./software.html">Software</a>
+                         <a class="dropdown-item" href="./credits.html">Credits</a>
+                    </div>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="./code.html">Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="./graph.html">Graph</a>
                 </li>
-                <li class="nav-item dropstart">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About Us</a>
                 </li>
             </ul>
             </div>

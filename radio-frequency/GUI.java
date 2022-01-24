@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.util.List;
 import javax.swing.*;
-import java.text.DecimalFormat;
+import java.text.DecimalFormat;     
 import java.util.Collections;
 
 public class GUI extends JPanel {
@@ -156,7 +156,7 @@ public class GUI extends JPanel {
         //Button
         JButton button_one = new JButton("Select FILE (.TXT)");
         JButton button_two = new JButton("Analysis ITU / EEE / EU");
-        JButton button_three = new JButton("Print Analysis");
+        JButton button_three = new JButton("Print Analysis");   
         JButton button_four = new JButton("Software Information");
 
         //Button dimensions

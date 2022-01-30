@@ -6,7 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.util.List;
 import javax.swing.*;
-import java.text.DecimalFormat;
+import java.text.DecimalFormat; 
 import java.util.Collections;
 
 public class GUI extends JPanel {
@@ -82,7 +82,7 @@ public class GUI extends JPanel {
             FontMetrics metrics = g2D.getFontMetrics();
             int labelWidth = metrics.stringWidth(point);
             if(i%Y_POINT_INTERVAL==0){
-                g2D.setColor(Color.BLACK);
+                g2D.setColor(Color.BLACK); 
                 g2D.drawString(point, xIn-labelWidth-4, yIn-4+metrics.getHeight()/2);//Point
                 g2D.setColor(Color.blue);
                 g2D.drawLine(xIn, yIn, xIn+POINT_INDICATOR_LENGTH, yFin);//Point indicator

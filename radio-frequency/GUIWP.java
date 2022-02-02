@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
 import java.util.Collections;
 
 public class GUI extends JPanel {
-
+ 
     //Colors
     private final Color GRID_COLOR = new Color(200, 200, 200, 200); // Gray
 
@@ -51,7 +51,7 @@ public class GUI extends JPanel {
         super.paintComponent(gph);
         Graphics2D g2D = (Graphics2D) gph;
         g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+ 
         //Simulation frame
         g2D.setColor(Color.WHITE);
         g2D.fillRect(WIDTH-L_PADDING-W_FRAME, T_PADDING, W_FRAME, H_FRAME);

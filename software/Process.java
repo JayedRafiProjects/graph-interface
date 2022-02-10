@@ -1,3 +1,14 @@
+/********************************************
+ *                                          *
+ * Process.java                             *
+ * Project: Graph Interface                 *
+ * Details:                                 *
+ * Access information from dataset.txt and  *
+ * sends the information to GUI.java.       *
+ * This class computes all information      *
+ * except the graphics.                     *
+ *                                          *
+ ********************************************/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -5,6 +16,7 @@ import java.util.Scanner;
 
 public class Process {
 
+    //Global variables
     private List<Double>xAxis;
     private List<Double>yAxis;
     private boolean valid = true;
@@ -12,16 +24,18 @@ public class Process {
     private String xRep = "NOT AVAILABLE";
     private String yRep = "NOT AVAILABLE";
     private int length = 0;
+
+    //constructor
     public Process(){
         xAxis = new ArrayList<>();
         yAxis = new ArrayList<>();
         fileProcess();
         System.out.println(valid());
-    };
+    }
 
+    //Accessing information for dataset.txt
     public void fileProcess(){
         try{
-
             File dataset = new File("dataset.txt");
             Scanner scan = new Scanner(dataset);
             int lineNum = 1;
@@ -71,48 +85,31 @@ public class Process {
         }
     }
 
+    //x-axis accessor
+    public List<Double> xList(){ return xAxis; }
 
+    //y-axis accessor
+    public List<Double> yList(){ return yAxis; }
 
-    /*
-    public void yAnalyze(){
-
-        Random r = new Random();
-        for(int i=0; i<100; i++){
-
-         yAxis.add((double)Math.sin(xAxis.get(i)));
-
-        }
-
-    }
-*/
-    public List<Double> xList(){
-        return xAxis;
-    }
-
-    public List<Double> yList(){
-        return yAxis;
-    }
-
+    //x-axis size
     public int xSize(){ return xAxis.size(); }
 
+    //y-axis size
     public int ySize(){ return yAxis.size(); }
 
-    public Double xMin(){
-        return Collections.min(xAxis);
-    }
+    //min in x-axis
+    public Double xMin(){ return Collections.min(xAxis); }
 
-    public Double xMax(){
-        return Collections.max(xAxis);
-    }
+    //max in x-axis
+    public Double xMax(){ return Collections.max(xAxis); }
 
-    public Double yMin(){
-        return Collections.min(yAxis);
-    }
+    //min in y-axis
+    public Double yMin(){ return Collections.min(yAxis); }
 
-    public Double yMax(){
-        return Collections.max(yAxis);
-    }
+    //max in y-axis
+    public Double yMax(){ return Collections.max(yAxis); }
 
+    //sum of x-axis
     public Double sumX(){
         double sum = 0;
         for(int i=0; i<xSize(); i++){
@@ -121,6 +118,7 @@ public class Process {
         return sum;
     }
 
+    //sum of y-axis
     public Double sumY(){
         double sum = 0;
         for(int i=0; i<ySize(); i++){
@@ -129,89 +127,69 @@ public class Process {
         return sum;
     }
 
-    //sum/size
+    //mean of x-axis
     public Double meanX(){
         return sumX()/xSize();
     }
 
+    //mean of y-axis
     public Double meanY(){
         return sumY()/ySize();
     }
 
+    //graph type x-axis
     public String growthX(){
-        boolean upwards = true;
-        boolean downwards = true;
-        boolean stable = true;
+        boolean upwards = false;
+        boolean downwards = false;
         String evaluation = "";
 
-        //check upwards
-        for(int i=0; i<xSize()-1; i++){
-            if(!(xAxis.get(i)<xAxis.get(i+1)))
-                upwards = false;
-        }
-
-        //check downwards
-        for(int i=0; i<xSize()-1; i++){
-            if(!(xAxis.get(i)>xAxis.get(i+1)))
-                downwards = false;
-        }
-
-        //check stable
-        for(int i=0; i<xSize()-1; i++){
-            if(!(xAxis.get(i)==xAxis.get(i+1))){
-                stable = false;
+        for(int i=0; i<ySize()-1; i++){
+            if(xAxis.get(i)<xAxis.get(i+1)) {
+                upwards = true;
+            }
+            if(xAxis.get(i)>xAxis.get(i+1)) {
+                downwards = true;
             }
         }
 
-        if((!stable && !upwards && !downwards)||(stable && upwards && downwards))
+        if(upwards && downwards)
             evaluation = "Fluctuation.";
-        else if(upwards)
-            evaluation = "Upward.";
-        else if(downwards)
-            evaluation = "Downward.";
-        else if(stable)
+        else if(!upwards && !downwards)
             evaluation = "Stable.";
+        else if(upwards)
+            evaluation = "Upwards";
+        else evaluation = "Downwards";
 
         return evaluation;
     }
 
+    //graph type y-axis
     public String growthY(){
-        boolean upwards = true;
-        boolean downwards = true;
-        boolean stable = true;
+        boolean upwards = false;
+        boolean downwards = false;
         String evaluation = "";
 
-        //check upwards
         for(int i=0; i<ySize()-1; i++){
-            if(!(yAxis.get(i)<yAxis.get(i+1)))
-                upwards = false;
-        }
-
-        //check downwards
-        for(int i=0; i<ySize()-1; i++){
-            if(!(yAxis.get(i)>yAxis.get(i+1)))
-                downwards = false;
-        }
-
-        //check stable
-        for(int i=0; i<xSize()-1; i++){
-            if(!(yAxis.get(i)==yAxis.get(i+1))){
-                stable = false;
+            if(yAxis.get(i)<yAxis.get(i+1)) {
+                upwards = true;
+            }
+            if(yAxis.get(i)>yAxis.get(i+1)) {
+                downwards = true;
             }
         }
 
-        if((!stable && !upwards && !downwards)||(stable && upwards && downwards))
+        if(upwards && downwards)
             evaluation = "Fluctuation.";
-        else if(upwards)
-            evaluation = "Upward.";
-        else if(downwards)
-            evaluation = "Downward.";
-        else if(stable)
+        else if(!upwards && !downwards)
             evaluation = "Stable.";
+        else if(upwards)
+            evaluation = "Upwards";
+        else evaluation = "Downwards";
 
         return evaluation;
     }
 
+    //median of x-axis
     public double medX(){
         boolean even = true;
         int index = 0;
@@ -224,6 +202,7 @@ public class Process {
         return xAxis.get(index);
     }
 
+    //median of y-axis
     public double medY(){
         boolean even = true;
         int index = 0;
@@ -236,22 +215,35 @@ public class Process {
         return yAxis.get(index);
     }
 
+    //topic
     public String topic(){
-
+        if(topic.equals(""))
+            return "NOT AVAILABLE";
+        else
             return topic;
     }
 
+    //x-representation
     public String getxRep(){
-        return xRep;
+        if(xRep.equals(""))
+            return "NOT AVAILABLE";
+        else
+            return xRep;
     }
 
+    //y-representation
     public String getyRep(){
-        return yRep;
+        if(yRep.equals(""))
+            return "NOT AVAILABLE";
+        else
+            return yRep;
     }
 
+    //validation confirmation
     public String valid(){
         if(valid)
             return "Validated";
-        else return "FILE CONTAINS ERROR. MISSING OR EXTRA VALUE ON X OR Y.";
+        else
+            return "FILE CONTAINS ERROR. MISSING OR EXTRA VALUE ON X OR Y.";
     }
 }

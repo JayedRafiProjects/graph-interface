@@ -247,6 +247,7 @@ public class Process {
             return "FILE CONTAINS ERROR. MISSING OR EXTRA VALUE ON X OR Y.";
     }
 
+    //Value range
     public int size(){
         return length;
     }

@@ -45,7 +45,7 @@
                     <a id="code" class="nav-link d-flex align-items-center" href="./code.html"> <ion-icon class="me-1" name="code-slash-outline"></ion-icon> Code</a>
                 </li>
                 <li class="nav-item">
-                    <a id="about" class="nav-link d-flex align-items-center" href="./about.html"> <ion-icon class="me-1" name="people-outline"></ion-icon> About Us</a>
+                    <a id="about" class="nav-link d-flex align-items-center" href="./about.html"> <ion-icon class="me-1" name="people-outline"></ion-icon> Team</a>
                 </li>
             </ul>
             </div>
@@ -376,15 +376,22 @@
 
 
     <!-- Start of Footer  -->
-    <footer class="d-flex flex-wrap justify-content-between bg-light align-items-center py-3 my-4">
-        <div class="container text-center">     
-            <span class="text-muted">
+    <footer class="d-flex flex-wrap justify-content-between bg-light align-items-center py-3 pb-5 my-4">
+        <div class="container text-center m">     
+            <span class="text-muted mb-3">
                 Made with 
                 <span class="text-danger mt-5"> 
                     <ion-icon size="large" name="heart"></ion-icon></span>
                 in Canada
             </span>
+
+            <div>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+            </div>
+
         </div>
+
+        
     </footer>
     <!-- End of Footer  -->
 
@@ -392,6 +399,11 @@
     <!-- Custom icons - Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Highlight Code Library -->
+    <link rel="stylesheet" href="./resources/vendor/highlight/styles/atom-one-dark.min.css">
+    <script src="./resources/vendor/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
 </body>
 </html>

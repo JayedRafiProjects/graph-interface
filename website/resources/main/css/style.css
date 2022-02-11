@@ -26,6 +26,10 @@ footer {
   margin-right: 0;
 }
 
+a {
+  cursor: pointer;
+}
+
 #logo img {
   height: 65px;
   color: aliceblue;

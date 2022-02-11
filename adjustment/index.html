@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Interface</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="./website/image/gi_logo.png">
+
+    <!-- Custom bootstrap -->
+    <link rel="stylesheet" href="./resources/vendor/css/bootstrap.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./resources/main/css/style.css">
+
+    <!-- Javascript needed for bootstrap -->
+    <script src="./resources/main/js/script.js"></script>
+    <script src="./resources/vendor/js/bootstrap.min.js" ></script>
+    <script src="./resources/vendor/js/popper.min.js" ></script>
+
+</head>
+<body>
+
+
+    <!-- Start of Header  -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center mt-4 mt-md-0" id="navbarColor01">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a id="home" class="nav-link active d-flex align-items-center"> 
+                        <ion-icon class="me-1" name="home-outline"></ion-icon> About 
+                    </a>
+                </li>
+
+                 <li class="nav-item">
+                    <a id="instructions" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="pencil-outline"></ion-icon> Instructions</a>
+                </li>
+
+                <li class="nav-item">
+                    <a id="installation" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="download-outline"></ion-icon> Installation</a>
+                </li>
+
+                 <li class="nav-item">
+                    <a id="download" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="cloud-download-outline"></ion-icon> Download</a>
+                </li>
+                <li class="nav-item">
+                    <a id="team" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="people-outline"></ion-icon> Team</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- End of Header  -->
+        <div class="content">
+			<p class="top">Graph Interface</p>
+			<!--ABOUT-->
+			<div id="about">
+			<box>About Graph Interface</box>
+			<p>Graph Interface is an open-source analysis software library. It can be used as both individual analysis software and software interface library. </p>
+			<p></p>
+			</div>
+			
+			<div id="manual">
+			<box>Instruction Manual</box>
+			<p><strong>Data Input</strong></p>
+			<p>Here we will feed our raw data into the software. Our team tried to keep this process simple by using the text-file format. Use our default text file (dataset.txt).<br/><br/>
+			<div align="center">
+			<img src="./website/image/text-file.png" alt="text-file" width="60%">
+			</div>
+			<!--text file manual-->
+			<code>TOPIC[<span>topic here</span>]</code><br/>
+			Type the topic inside the bracket.<br/><br/>
+			<code>QUANTITY[<span>the number of inputs in x/y</span>]</code><br/>
+			Type the number of values in x &amp; y. The number you type = quantity x = quantity y.<br/><br/>
+			<code>X[<span>what x represents</span>]</code><br/>
+			Type what x-axis represents in your data.<br/><br/>
+			<code>X[<span>values of x</span>]</code><br/>
+			Type the numeric values of the x-axis separated by a comma (,).<br/><br/>
+			<code>Y[<span>what Y represents</span>]</code><br/>
+			Type what x-axis represents in your data.<br/><br/>
+			<code>Y[<span>values of y</span>]</code><br/>
+			Type the numeric values of the x-axis separated by a comma (,).<br/><br/>
+			<span>Make sure the file name is dataset.txt &amp; brackets before and after your inputs.</span>
+			<br/><br/></p>
+			<p><strong>Analysis</strong></p>
+			<p>The interface contains two parts to help you analyze the data: the graphical representation and the information panel.
+			The graph panel is a single line display where your provided value gets displayed. Here the vertical line represents the y-axis and the horizontal line represents the x-axis.</p>
+			<div align="center">
+			<img src="./website/image/interface.png" alt="interface" width="60%">
+			</div>
+			<p>
+			<code>Topic:</code><br/>
+			It displays the content you typed on the TOPIC[] section in the text file.<br/><br/>
+			<code>x represents:</code><br/>
+			It displays the content you typed on the X[] section in the text file.<br/><br/>
+			<code>y represents:</code><br/>
+			It displays the content you typed on the Y[] section in the text file.<br/><br/>
+			<code>Max(x):</code><br/>
+			It displays the maximum value in the x-axis.<br/><br/>
+			<code>Min(x):</code><br/>
+			It displays the minimum value in the x-axis.<br/><br/>
+			<code>Max(y):</code><br/>
+			It displays the maximum value in the x-axis.<br/><br/>
+			<code>Med(x):</code><br/>
+			It displays the median value of x-axis.<br/><br/>
+			<code>Med(y):</code><br/>
+			It displays the median value of y-axis.<br/><br/>
+			<code>FILE TEST:</code><br/>
+			It displays if the user input is validated. Condition: QUANTITY[ ] = quantity(x) = quantity(y).<br/><br/>
+			<code>Mean(x):</code><br/>
+			It displays the mean value of the x-axis.<br/><br/>
+			<code>Mean(y):</code><br/>
+			It displays the mean value of the y-axis.<br/><br/>
+			<code>Growth(x):</code><br/>
+			It displays the characteristic of the x-axis.<br/>
+				If values are going upwards: Upwards.<br/>
+				If values are going downwards: Downwards.<br/>
+				If the set contains ups &amp; downs: Fluctuate.<br/>
+				If the values are same: Stable.<br/><br/>
+			<code>Growth(y):</code><br/>
+			It displays the characteristic of the y-axis.<br/>
+				If values are going upwards: Upwards.<br/>
+				If values are going downwards: Downwards.<br/>
+				If the set contains ups &amp; downs: Fluctuate.<br/>
+				If the values are same: Stable.<br/><br/>
+			<code>Total x value:</code><br/>
+			It displays the total value in the x-axis.<br/><br/>
+			<code>Total y value:</code><br/>
+			It displays the total value in the y-axis.<br/><br/>
+			<code>Sum(x):</code><br/>
+			It displays the summation of all values in x-axis.<br/><br/>
+			<code>Sum(y):</code><br/>
+			It displays the summation of all values in y-axis.<br/><br/>
+			<code>Optional:</code><br/>
+			It is extra space for the user if they want to add something extra.<br/><br/>
+			<code>Software Information:</code><br/>
+			Contains Version number and last update time of the software.<br/><br/>
+			</p>
+			</div>
+            
+			<!--TEAM-->
+			<div id="project-team">
+			<box>Graph Interface Team</box>
+			<p><strong><a href="https://jayedrafi.com" title="portfolio">Jayed Rafi</a></strong><br/>
+			Software Development<br/>
+			Email: jayedrafi@outlook.com</p>
+			<p><strong><a href="https://jashann.ca/" title="portfolio">Jashanjot Singh Gill</a></strong><br/>
+			Web Development<br/>
+			Email: jashangill3592@gmail.com</p>
+			<p></p>
+			<p></p>
+			</div>
+        
+        </div>
+    
+
+
+    
+
+    <!-- Start of Footer  -->
+    <footer>
+           
+            <div align="center" style="padding: 20px">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+          
+
+        </div>
+
+        
+    </footer>
+    <!-- End of Footer  -->
+
+
+    <!-- Custom icons - Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Highlight Code Library -->
+    <link rel="stylesheet" href="./resources/vendor/highlight/styles/atom-one-dark.min.css">
+    <script src="./resources/vendor/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+</html>

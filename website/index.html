@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./resources/main/css/style.css">
 
     <!-- Javascript needed for bootstrap -->
+    <script src="./resources/main/js/script.js"></script>
     <script src="./resources/vendor/js/bootstrap.min.js" ></script>
     <script src="./resources/vendor/js/popper.min.js" ></script>
 
@@ -24,10 +25,10 @@
 
 
     <!-- Start of Header  -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
-                 <img alt="logo" src="./resources/main/assets/logo_with_text.png">
+                 <img alt="logo" src="./resources/main/assets/graphinterface_logo.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,27 +37,15 @@
             <div class="collapse navbar-collapse text-center mt-4 mt-md-0" id="navbarColor01">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active d-flex align-items-center" href="./index.html"> <ion-icon class="me-1" name="home-outline"></ion-icon> 
-                        Home
+                    <a id="home" class="nav-link active d-flex align-items-center" href="./index.html"> 
+                        <ion-icon class="me-1" name="home-outline"></ion-icon> Home 
                     </a>
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> <ion-icon class="me-1" name="add-circle-outline"></ion-icon> More </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item d-flex align-items-center" href="./software.html"> <ion-icon class="me-1" name="desktop-outline"></ion-icon> Software</a>
-                         <a class="dropdown-item d-flex align-items-center" href="./credits.html"> <ion-icon class="me-1" name="people-circle-outline"></ion-icon> Credits</a>
-                    </div>
-                </li>
-
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="./code.html"> <ion-icon class="me-1" name="code-slash-outline"></ion-icon> Code</a>
+                    <a id="code" class="nav-link d-flex align-items-center" href="./code.html"> <ion-icon class="me-1" name="code-slash-outline"></ion-icon> Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="./graph.html"> <ion-icon class="me-1" name="bar-chart-outline"></ion-icon> Graph</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="./about.html"> <ion-icon class="me-1" name="people-outline"></ion-icon> About Us</a>
+                    <a id="about" class="nav-link d-flex align-items-center" href="./about.html"> <ion-icon class="me-1" name="people-outline"></ion-icon> About Us</a>
                 </li>
             </ul>
             </div>
@@ -65,210 +54,325 @@
      <!-- End of Header  -->
 
 
-    <div class="container my-5">
-        <h2 class="text-center my-5">Radio Frequency – System Analysis Software </h2>
-        
-        <!-- Start of Inside Nav -->
-        <ul class="nav bg-light p-3 my-3 bordered-10">
-                <!-- <li class="breadcrumb-item"><a href="./software.html">Software</a></li> -->
-                <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center active" href="./software.html"> <ion-icon class="me-1" name="desktop-outline"></ion-icon> Software</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center" href="#"> <ion-icon class="me-1" name="create-outline"></ion-icon> Test 1 </a>
-                </li>
-                 <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center" href="#"> <ion-icon class="me-1" name="create-outline"></ion-icon> Test 2 </a>
-                </li>
-                 <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center" href="#"> <ion-icon class="me-1" name="create-outline"></ion-icon> Test 3 </a>
-                </li>
-                 <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center" href="#"> <ion-icon class="me-1" name="create-outline"></ion-icon> Test 4 </a>
-                </li>
-                 <li class="nav-item me-3">
-                    <a class="nav-link d-flex align-items-center" href="./credits.html"> <ion-icon class="me-1" name="people-circle-outline"></ion-icon> Credits </a>
-                </li>
-                <!-- <li class="breadcrumb-item"><a href="#">Test 1 </a></li>
-                <li class="breadcrumb-item"><a href="#">Test 2 </a></li>
-                <li class="breadcrumb-item"><a href="#">Test 3 </a></li>
-                <li class="breadcrumb-item"><a href="#">Test 4 </a></li>
-                <li class="breadcrumb-item"><a href="#"> Final </a></li>
-                <li class="breadcrumb-item"><a href="./credits.html"> Credits </a></li> -->
-        </ul>
-        <!-- End of Inside Nav -->
+    <section id="home" class="toggle-content" style="display: block;">
+        <div class="container my-5">
+            <h2 class="text-center my-5">Radio Frequency – System Analysis Software </h2>
+            
+            <!-- Start of Inside Nav -->
+            <ul class="nav bg-light p-3 my-3 bordered-10">
+                    <li class="nav-item me-3">
+                        <a id="home" class="nav-link d-flex align-items-center active" href="./software.html"> <ion-icon class="me-1" name="desktop-outline"></ion-icon> Software</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a id="credits" class="nav-link d-flex align-items-center" href="./credits.html"> <ion-icon class="me-1" name="people-circle-outline"></ion-icon> Credits </a>
+                    </li> 
+            </ul>
+            <!-- End of Inside Nav -->
 
-        <p class="lead">
-            Radio frequency is a qualifying representation of oscillation rate of
-            electromagnetic radio waves or electromagnetic radiation spectrum
-            ranging from 9 KHz to 300 GHz.
-        </p>
+            <p class="lead">
+                Radio frequency is a qualifying representation of oscillation rate of
+                electromagnetic radio waves or electromagnetic radiation spectrum
+                ranging from 9 KHz to 300 GHz.
+            </p>
 
-        <!-- Start of 1st table -->
-        <h3 class="mt-5 mb-3">International telecommunication Union (ITU) Standard</h3>
-        
-        <table class="table table-hover bordered-10">
-            <thead>
-                <tr>
-                    <th scope="col">Brand name & Abbr.</th>
-                    <th scope="col">Band number</th>
-                    <th scope="col">Frequency range</th>
-                    <th scope="col">Wavelength</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-active">
-                    <th scope="row"> Extremely Low Frequency - ELF </th>
-                    <td>1</td>
-                    <td>3 Hz – 30 Hz</td>
-                    <td>100000 km – 10000 km</td>
-                </tr>
-                <tr>
-                    <th scope="row">Super Low Frequency - SLF </th>
-                    <td>2</td>
-                    <td>30 Hz - 300 Hz</td>
-                    <td>10000 km – 1000 km</td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">Ultra-Low Frequency - ULF </th>
-                    <td>3</td>
-                    <td>300 Hz - 3000 Hz</td>
-                    <td>1000 km – 100 km</td>
-                </tr>
-                 <tr>
-                    <th scope="row">Very Low Frequency - VLF </th>
-                    <td>4</td>
-                    <td>3 KHz - 30 KHz</td>
-                    <td>100 km – 10 km</td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">Low Frequency - LF </th>
-                    <td>5</td>
-                    <td>30 KHz - 300 KHz</td>
-                    <td>10 km – 1 km</td>
-                </tr>
-                 <tr>
-                    <th scope="row">Medium Frequency - MF </th>
-                    <td>6</td>
-                    <td>300 KHz - 3000 KHz</td>
-                    <td>1000 m – 100 m</td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">High Frequency - HF </th>
-                    <td>7</td>
-                    <td>3 MHz - 30 MHz</td>
-                    <td>100 m – 10 m</td>
-                </tr>
-                <tr>
-                    <th scope="row">Very High Frequency - VHF </th>
-                    <td>8</td>
-                    <td>30 MHz - 300 MHz</td>
-                    <td>10 m – 1 m</td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">Ultra-High Frequency -UHF </th>
-                    <td>9</td>
-                    <td>300 MHz - 3000 MHz</td>
-                    <td>1 m – 0.1 m</td>
-                </tr>
-                <tr>
-                    <th scope="row">Super High Frequency - SHF </th>
-                    <td>10</td>
-                    <td>3 GHz - 30 GHz</td>
-                    <td>100 mm – 10 mm</td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">Extremely High Frequency -EHF </th>
-                    <td>11</td>
-                    <td>30 GHz - 300 GHz</td>
-                    <td>30 mm – 1 mm</td>
-                </tr>
-                <tr>
-                    <th scope="row">Tremendously High Frequency - THF </th>
-                    <td>12</td>
-                    <td>300 GHz - 3000 GHz</td>
-                    <td>1 mm – 0.1 mm</td>
-                </tr>
-               
+            <!-- Start of 1st table -->
+            <h3 class="mt-5 mb-3">International telecommunication Union (ITU) Standard</h3>
+            
+            <table class="table table-hover bordered-10">
+                <thead>
+                    <tr>
+                        <th scope="col">Brand name & Abbr.</th>
+                        <th scope="col">Band number</th>
+                        <th scope="col">Frequency range</th>
+                        <th scope="col">Wavelength</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row"> Extremely Low Frequency - ELF </th>
+                        <td>1</td>
+                        <td>3 Hz – 30 Hz</td>
+                        <td>100000 km – 10000 km</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Super Low Frequency - SLF </th>
+                        <td>2</td>
+                        <td>30 Hz - 300 Hz</td>
+                        <td>10000 km – 1000 km</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">Ultra-Low Frequency - ULF </th>
+                        <td>3</td>
+                        <td>300 Hz - 3000 Hz</td>
+                        <td>1000 km – 100 km</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Very Low Frequency - VLF </th>
+                        <td>4</td>
+                        <td>3 KHz - 30 KHz</td>
+                        <td>100 km – 10 km</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">Low Frequency - LF </th>
+                        <td>5</td>
+                        <td>30 KHz - 300 KHz</td>
+                        <td>10 km – 1 km</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Medium Frequency - MF </th>
+                        <td>6</td>
+                        <td>300 KHz - 3000 KHz</td>
+                        <td>1000 m – 100 m</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">High Frequency - HF </th>
+                        <td>7</td>
+                        <td>3 MHz - 30 MHz</td>
+                        <td>100 m – 10 m</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Very High Frequency - VHF </th>
+                        <td>8</td>
+                        <td>30 MHz - 300 MHz</td>
+                        <td>10 m – 1 m</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">Ultra-High Frequency -UHF </th>
+                        <td>9</td>
+                        <td>300 MHz - 3000 MHz</td>
+                        <td>1 m – 0.1 m</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Super High Frequency - SHF </th>
+                        <td>10</td>
+                        <td>3 GHz - 30 GHz</td>
+                        <td>100 mm – 10 mm</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">Extremely High Frequency -EHF </th>
+                        <td>11</td>
+                        <td>30 GHz - 300 GHz</td>
+                        <td>30 mm – 1 mm</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tremendously High Frequency - THF </th>
+                        <td>12</td>
+                        <td>300 GHz - 3000 GHz</td>
+                        <td>1 mm – 0.1 mm</td>
+                    </tr>
                 
-               
-            </tbody>
-        </table>
-         <!-- End of 1st table -->
+                    
+                
+                </tbody>
+            </table>
+            <!-- End of 1st table -->
 
-          <!-- Start of 2nd table -->
-        <h3 class="mt-5 mb-3">US Institute of Electrical and Electronics Engineers (IEEE) Standard</h3>
+            <!-- Start of 2nd table -->
+            <h3 class="mt-5 mb-3">US Institute of Electrical and Electronics Engineers (IEEE) Standard</h3>
+            
+            <table class="table table-hover bordered-10" style="max-width: 600px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Brand name & Abbr.</th>
+                        <th scope="col">Frequency range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row"> High Frequency - HF</th>
+                        <td> 0.003 GHz - 0.03 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Very High Frequency - VHF</th>
+                        <td> 0.03 GHz - 0.3 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row"> Ultra-High Frequency - UHF</th>
+                        <td> 0.3 GHz - 1 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Long Wave - L</th>
+                        <td> 1 GHz - 2 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">Short Wave - S</th>
+                        <td> 2 GHz - 4 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Compromise between S and X – C</th>
+                        <td> 4 GHz - 8 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row"> Used in WW II for fire control. X for cross – X </th>
+                        <td> 8 GHz - 12 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Kurz-under - K<sub>u</sub> </th>
+                        <td> 12 GHz - 18 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row"> Kurz – K </th>
+                        <td> 18 GHz - 27 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Kurz-above - K<sub>a</sub> </th>
+                        <td> 27 GHz - 40 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row"> V </th>
+                        <td> 40 GHz - 75 GHz </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> W </th>
+                        <td> 75 GHz - 110 GHz </td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row"> Millimeter - mm or G </th>
+                        <td> 110 GHz – 300 GHz </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="mt-5 mb-3">Conversion chart</h4>
+                    <p class="lead">1 Km = 1000 m = 1000000 mm</p>
+                    <p class="lead">1 GHz = 1000 MHz = 1000000 KHz = 1000000000 Hz</p>
+
+            <!-- End of 2nd table -->
         
-        <table class="table table-hover bordered-10" style="max-width: 600px;">
-            <thead>
-                <tr>
-                    <th scope="col">Brand name & Abbr.</th>
-                    <th scope="col">Frequency range</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-active">
-                    <th scope="row"> High Frequency - HF</th>
-                    <td> 0.003 GHz - 0.03 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> Very High Frequency - VHF</th>
-                    <td> 0.03 GHz - 0.3 GHz </td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row"> Ultra-High Frequency - UHF</th>
-                    <td> 0.3 GHz - 1 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> Long Wave - L</th>
-                    <td> 1 GHz - 2 GHz </td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row">Short Wave - S</th>
-                    <td> 2 GHz - 4 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> Compromise between S and X – C</th>
-                    <td> 4 GHz - 8 GHz </td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row"> Used in WW II for fire control. X for cross – X </th>
-                    <td> 8 GHz - 12 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> Kurz-under - K<sub>u</sub> </th>
-                    <td> 12 GHz - 18 GHz </td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row"> Kurz – K </th>
-                    <td> 18 GHz - 27 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> Kurz-above - K<sub>a</sub> </th>
-                    <td> 27 GHz - 40 GHz </td>
-                </tr>
-                <tr class="table-active">
-                    <th scope="row"> V </th>
-                    <td> 40 GHz - 75 GHz </td>
-                </tr>
-                <tr>
-                    <th scope="row"> W </th>
-                    <td> 75 GHz - 110 GHz </td>
-                </tr>
-                 <tr class="table-active">
-                    <th scope="row"> Millimeter - mm or G </th>
-                    <td> 110 GHz – 300 GHz </td>
-                </tr>
-            </tbody>
-        </table>
+        </div>
+    </section>
 
-        <h4 class="mt-5 mb-3">Conversion chart</h4>
-                <p class="lead">1 Km = 1000 m = 1000000 mm</p>
-                <p class="lead">1 GHz = 1000 MHz = 1000000 KHz = 1000000000 Hz</p>
 
-         <!-- End of 2nd table -->
-    
-    </div>
+    <section id="credits" class="toggle-content" style="display: none;">
+        <div class="container my-5">
+            <h2 class="text-center my-5">Radio Frequency – System Analysis Software </h2>
+            
+            <!-- Start of Inside Nav -->
+            <ul class="nav bg-light p-3 my-3 bordered-10">
+                     <li class="nav-item me-3">
+                        <a id="home" class="nav-link d-flex align-items-center" href="./software.html"> <ion-icon class="me-1" name="desktop-outline"></ion-icon> Software</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a id="credits" class="nav-link d-flex align-items-center active" href="./credits.html"> <ion-icon class="me-1" name="people-circle-outline"></ion-icon> Credits </a>
+                    </li>
+            </ul>
+            <!-- End of Inside Nav -->
+
+            <p class="lead">
+                <ol>
+                    <li class="lead mt-3">
+                        Scarpati, Jessica. “What Is Radio Frequency (RF, RF)? - Definition from Whatis.com.”
+                    SearchNetworking. TechTarget, February 25, 2021.
+                    https://www.techtarget.com/searchnetworking/definition/radio-frequency. 
+                    </li>
+                    <li class="lead mt-3">
+                        “Radio Frequency.” n.d. Www.cs.mcgill.ca.
+                        https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/r/Radio_frequency.htm.
+                    </li>
+                    <li class="lead mt-3">
+                        Wikipedia Contributors. 2019. “Radio Spectrum.” Wikipedia. Wikimedia
+                        Foundation. November 15, 2019.
+                        https://en.wikipedia.org/wiki/Radio_spectrum.
+                    </li>
+                </ol>
+            </p>
+        
+        </div>
+    </section>
+
+
+    <section id="code" class="toggle-content" style="display: none;">
+        <div class="container">
+            <pre>
+                <code class="language-java bordered-10"> 
+                    public class TestLab2Bronze {
+                    
+                    public static void main(String[] args) {
+                        
+                        //Create the teams in the Central division of the NHL.
+                        //This is intentionally very simple brute-force code.
+                        HockeyTeam_Before team1 = new HockeyTeam_Before("Winnipeg",22,14,8);
+                        HockeyTeam_Before team2 = new HockeyTeam_Before("Chicago",28,13,2);
+                        HockeyTeam_Before team3 = new HockeyTeam_Before("Colorado",18,17,8);
+                        HockeyTeam_Before team4 = new HockeyTeam_Before("St. Louis",27,13,3);
+                        HockeyTeam_Before team5 = new HockeyTeam_Before("Dallas",19,16,7);
+                        HockeyTeam_Before team6 = new HockeyTeam_Before("Minnesota",18,19,5);
+                        HockeyTeam_Before team7 = new HockeyTeam_Before("Nashville",29,9,4);
+        
+                        //Print out all 7 objects, again with simple code.
+                        System.out.println("Initial teams:\n" +
+                                team1 + "\n" + team2 + "\n" + team3 + "\n" + team4 + "\n" +
+                                team5 + "\n" + team6 + "\n" + team7 + "\n");
+                        
+                        //Record the results of some fictional games
+                        team1.won(); team2.lost();          //Winnipeg beat Chicago
+                        team1.won(); team3.lostOvertime();  //Winnipeg beat Colorado
+                        team1.won(); team4.lostOvertime();  //Winnipeg beat St. Louis
+                        team1.won(); team5.lost();          //Winnipeg beat Dallas
+                        team1.won(); team6.lost();          //Winnipeg beat Minnesota
+                        team1.won(); team7.lostOvertime();  //Winnipeg beat Nashville
+                        //OK. So the Jets are really hot right now.
+                        team4.won(); team2.lost();          //St. Louis beat Chicago
+                        team3.won(); team5.lost();          //Colorado beat Dallas   
+                        
+                        //Print out the 7 objects again, to see the changes.
+                        System.out.println("Final teams:\n" +
+                                team1 + "\n" + team2 + "\n" + team3 + "\n" + team4 + "\n" +
+                                team5 + "\n" + team6 + "\n" + team7 + "\n");
+                        
+                    }//main
+                    
+                    }//TestLab2Bronze
+                </code>
+            </pre>
+        </div>
+    </section>
+
+
+    <section id="about" class="toggle-content" style="display: none;">
+        <div class="container my-5">
+            <h1>Meet us</h1>
+            
+            <!-- Start of 1st Profile -->
+            <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+                <div class="col-12 col-md-4">
+                    <img class="rounded-circle" src="./resources/main/assets/jayed_profile.jfif" alt="jayed_profile" srcset="">
+                </div>
+
+                <div class="col-12 col-md-8">
+                    <h3>Jayed Rafi</h3>
+                    <p class="lead">Software Development</p>
+                    <a class="text-light btn btn-success" href="https://jayedrafi.com/" target="_blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                    <div></div>
+                    <a class="text-light btn btn-dark mt-2" href="https://github.com/JayedRafiProjects" target="_blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                    <div></div>
+                    <a class="text-light btn btn-info mt-2" href="https://www.linkedin.com/in/jayed-rafi/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                </div>
+            </div>
+            <!-- End of 1st Profile -->
+
+
+            <!-- Start of 2nd Profile -->
+            <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+                <div class="col-12 col-md-4">
+                    <img class="rounded-circle" src="./resources/main/assets/jashan_profile.jfif" alt="jayed_profile" srcset="">
+                </div>
+
+                <div class="col-12 col-md-8 mt-5">
+                    <h3>Jashanjot Singh Gill</h3>
+                    <p class="lead">Web Development</p>
+                    <a class="text-light btn btn-success" href="https://jashann.github.io" target="_blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                    <div></div>
+                    <a class="text-light btn btn-dark mt-2" href="https://github.com/Jashann" target="_blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                    <div></div>
+                    <a class="text-light btn btn-info mt-2" href="https://www.linkedin.com/in/jashan7/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> <ion-icon name="chevron-forward-circle-outline"></ion-icon> </a>
+                </div>
+            </div>
+            <!-- End of 2nd Profile -->
+
+        </div>
+    </section>
+
 
 
     <!-- Start of Footer  -->

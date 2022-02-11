@@ -20,8 +20,14 @@ footer {
   border-radius: 20px;
 }
 
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+}
+
 #logo img {
-  height: 50px;
+  height: 65px;
   color: aliceblue;
 }
 

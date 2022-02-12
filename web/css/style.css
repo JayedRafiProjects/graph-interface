@@ -130,3 +130,8 @@ footer a:hover{
 .logo{
 	padding: 0px 75px;
 }
+
+.news{
+	height: 100px;
+	overflow-y: auto;
+}

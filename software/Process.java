@@ -30,6 +30,8 @@ public class Process {
         xAxis = new ArrayList<>();
         yAxis = new ArrayList<>();
         fileProcess();
+        if(!valid)
+            backup();
         System.out.println(valid());
     }
 
@@ -244,11 +246,27 @@ public class Process {
         if(valid)
             return "Validated";
         else
-            return "FILE CONTAINS ERROR. MISSING OR EXTRA VALUE ON X OR Y.";
+            return "FILE CONTAINS ERROR.";
     }
 
     //Value range
     public int size(){
         return length;
+    }
+
+    //empty sets and a equal set
+    public void backup(){
+        for(int i=0; i<xSize(); i++){
+            xAxis.remove(i);
+        }
+
+        for(int i=0; i<ySize(); i++){
+            yAxis.remove(i);
+        }
+
+        for(int i=0; i<100; i++){
+            xAxis.add(1.1);
+            yAxis.add(1.1);
+        }
     }
 }

@@ -123,3 +123,7 @@ footer a:hover{
 	border-style: ridge;
 	border-width: 0.1rem;
 }
+
+.logo{
+	padding: 0px 75px;
+}

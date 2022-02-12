@@ -48,11 +48,11 @@ a {
 
 .content a{
 	text-decoration: none;
-	color: #212529;
+	color: inherit;
 }
 
-.container a:hover{
-	color: #6c757d;
+.content a:hover{
+	text-decoration: underline;
 }
 
 code{

@@ -10,12 +10,6 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-footer {
-  position: absolute;
-  bottom: -20px;
-  height: 100px;
-  width: 100%;
-}
 
 .bordered-10 {
   border-radius: 20px;
@@ -75,15 +69,20 @@ box{
 	background-color: #dee2e6;
 	padding: 10px 0px;
 	margin: 15px 0px 15px 0px;
-	color: black;
-	
 }
 footer{
+	  position: absolute;
+  bottom: -20px;
+  height: 100px;
+  width: 100%;
 	background-color:  #495057;
 	color: white;
 }
 
-
+.nav-pad{
+	padding: 0px 75px;
+	
+}
 
 footer a{
 	text-decoration: none;

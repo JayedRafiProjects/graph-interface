@@ -130,10 +130,10 @@ footer a:hover{
 
 
 @media only screen and (max-width:500px) {
-  /* For mobile phones: */
   .logo {
       display: block;
   margin-left: auto;
   margin-right: auto;
+	  width: 50px;
   }
 }

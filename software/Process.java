@@ -30,9 +30,10 @@ public class Process {
         xAxis = new ArrayList<>();
         yAxis = new ArrayList<>();
         fileProcess();
+        if(length==0)
+            valid=false;
         if(!valid)
             backup();
-        System.out.println(valid());
     }
 
     //Accessing information for dataset.txt

@@ -84,6 +84,10 @@ footer{
 	
 }
 
+.nav-bckgrnd{
+	background-color: #dee2e6;
+}
+
 footer a{
 	text-decoration: none;
 	color: white;
@@ -98,4 +102,23 @@ footer a:hover{
 	font-family: 'Ramabhadra', sans-serif;
 	font-size: 64px;
 	text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+	padding: 0px 200px;
+	
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+	border-style: ridge;
+	border-width: 0.1rem;
 }

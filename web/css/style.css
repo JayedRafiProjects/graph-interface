@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 100px; 
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.bordered-10 {
+  border-radius: 20px;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+.nav-link:hover,
+.active {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.25rem;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.content{
+	padding: 15px 75px;
+  font-family: 'Lato', sans-serif;
+}
+
+.content a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.content a:hover{
+	text-decoration: underline;
+	color: inherit;
+}
+
+code{
+	color: #0466c8;
+}
+
+span{
+	color: #f94144;
+}
+
+box{
+	text-align: center;
+	display: block;
+	background-color: #dee2e6;
+	padding: 10px 0px;
+	margin: 15px 0px 15px 0px;
+}
+footer{
+	  position: absolute;
+  bottom: -20px;
+  height: 100px;
+  width: 100%;
+	background-color:  #495057;
+	color: white;
+}
+
+.nav-pad{
+	padding: 0px 75px;
+	font-weight: normal;
+}
+
+.nav-bckgrnd{
+	background-color: #dee2e6;
+}
+
+footer a{
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.top{
+	font-family: 'Ramabhadra', sans-serif;
+	font-size: 64px;
+	text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+	padding: 0px 200px;
+	
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+	border-style: ridge;
+	border-width: 0.1rem;
+}

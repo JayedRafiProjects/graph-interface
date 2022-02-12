@@ -88,7 +88,10 @@ footer{
 .nav-bckgrnd{
 	background-color: #dee2e6;
 }
-
+footer{
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+}
 footer a{
 	text-decoration: none;
 	color: white;

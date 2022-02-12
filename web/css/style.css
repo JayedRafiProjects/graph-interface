@@ -127,13 +127,3 @@ footer a:hover{
 .logo{
 	padding: 0px 75px;
 }
-
-
-@media only screen and (max-width:500px) {
-  .logo {
-      display: block;
-  margin-left: auto;
-  margin-right: auto;
-	  width: 50px;
-  }
-}

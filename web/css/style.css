@@ -133,14 +133,20 @@ footer a:hover {
 }
 
 #navbar-toggler {
+  display: none;
   font-size: 30px;
   padding-right: 30px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 994px) {
+  #navbar-toggler {
+    display: block;
+  }
   #navbar-list {
+    padding: 30px 0;
+  }
+  #navbar-list.hide {
     display: none;
-    padding: 50px 0;
   }
   #navbar-list .nav-item {
     margin-bottom: 10px;

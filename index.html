@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <title>Graph Interface</title>
 	<link rel="icon" href="./web/image/logo.png">
@@ -11,6 +12,7 @@
 	<link rel="stylesheet" href="./web/css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<script defer src="./web/script.js"></script>
 
 </head>
 <body>
@@ -19,11 +21,14 @@
     <nav class="navbar navbar-expand-lg nav-bckgrnd">
         <div class="container-fluid">
 			<div class="logo">
-			<a href="https://jayedrafi.com/graph-interface/"><img src="./web/image/logo.png" alt="logo" width="50px"></a>
+			<a href="https://jayedrafi.com/graph-interface/">
+				<img src="./web/image/logo.png" alt="logo" width="50px"></a>
 			</div>
-            <div class="navbar-collapse" >
 
-            <ul class="navbar-nav ms-auto nav-pad">
+			<a id="navbar-toggler"> &#9776 </a>
+
+            <div class="navbar-collapse" >
+            <ul id="navbar-list" class="navbar-nav ms-auto nav-pad">
                 <li class="nav-item">
                     <a href="#about" class="nav-link active d-flex align-items-center">About</a>
                 </li>

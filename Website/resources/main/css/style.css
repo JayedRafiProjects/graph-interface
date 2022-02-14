@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: #575757;
+}
+
+footer,
+#license {
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+}
+
+.top {
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 64px;
+  text-align: center;
+}
+
+code {
+  color: #3459e6;
+}
+
+.heading-font {
+  font-family: 'Ramabhadra', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid rgb(143, 143, 143) !important;
+}
+
+#table .col {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: -20px;
+  height: 100px;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.bordered-10 {
+  border-radius: 20px;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+#logo img {
+  height: 65px;
+  color: aliceblue;
+}
+
+.nav-link:hover,
+.active {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.25rem;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@media (max-width: 993px) {
+  .row {
+    flex-direction: column;
+  }
+}

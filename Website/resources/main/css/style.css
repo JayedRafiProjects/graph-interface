@@ -90,9 +90,9 @@ a {
   text-decoration: none;
 }
 
-.profile img {
-  max-width: 300px;
-  max-height: 300px;
+#news > .container {
+  height: 400px;
+  overflow-y: auto;
 }
 
 @media (max-width: 993px) {

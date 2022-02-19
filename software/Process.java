@@ -10,7 +10,7 @@
  *                                          *
  ********************************************/
 import java.io.File;
-import java.io.FileNotFoundException; 
+import java.io.FileNotFoundException;  
 import java.util.*; 
 import java.util.Scanner;
 
@@ -48,7 +48,7 @@ public class Process {
                     topic = firstLine.substring(6,firstLine.length()-1);
                 }
                 else if(lineNum == 2){
-                    String secondLine = scan.nextLine();
+                    String secondLine = scan.nextLine(); 
                     length = Integer.parseInt(secondLine.substring(9,secondLine.length()-1));
                 }
                 else if(lineNum == 3){

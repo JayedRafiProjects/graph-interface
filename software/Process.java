@@ -10,8 +10,8 @@
  *                                          *
  ********************************************/
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.*;
+import java.io.FileNotFoundException; 
+import java.util.*; 
 import java.util.Scanner;
 
 public class Process {
@@ -44,7 +44,7 @@ public class Process {
             int lineNum = 1;
             while(scan.hasNextLine() && lineNum <=6){
                 if(lineNum == 1){
-                    String firstLine = scan.nextLine();
+                    String firstLine = scan.nextLine(); 
                     topic = firstLine.substring(6,firstLine.length()-1);
                 }
                 else if(lineNum == 2){
@@ -245,7 +245,7 @@ public class Process {
     //validation confirmation
     public String valid(){
         if(valid)
-            return "Validated";
+            return "Validated"; 
         else
             return "FILE CONTAINS ERROR.";
     }

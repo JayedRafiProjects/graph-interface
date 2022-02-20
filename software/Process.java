@@ -7,7 +7,7 @@
  * sends the information to GUI.java.       *
  * This class computes all information      *
  * except the graphics.                     *
- *                                          *
+ *                                          *    
  ********************************************/
 import java.io.File;
 import java.io.FileNotFoundException;  

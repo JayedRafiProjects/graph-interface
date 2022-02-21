@@ -5,7 +5,7 @@
  * Details:                                 *
  * Access information from dataset.txt and  *
  * sends the information to GUI.java.       *
- * This class computes all information      *
+ * This class computes all information      * 
  * except the graphics.                     *
  *                                          *    
  ********************************************/

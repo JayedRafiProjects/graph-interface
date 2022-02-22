@@ -5,24 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Graph Interface </title>
-
     <!-- favicon -->
     <link rel="shortcut icon" type="image/jpg" href="./website/resources/main/assets/logo.png">
-
     <!-- Custom bootstrap css - CONTAINS ONLY MARGIN AND PADDING CLASSES --> 
     <link rel="stylesheet" href="./website/resources/main/css/customBootstrap.css">
-
     <!-- Main css -->
     <link rel="stylesheet" href="./website/resources/main/css/style.css">
-
      <!-- Custom icons - Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </head>
 <body>
-
-
     <!-- Start of Header  -->
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -30,7 +23,6 @@
                 <!--<a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
                      <img alt="logo" src="./website/resources/main/assets/logo.png">
                 </a>-->
-
                 <div class="collapse navbar-collapse text-center mt-2 mt-md-0" id="navbarColor01">
                     <ul class="navbar-nav ms-auto d-flex flex-wrap">
                         <li class="nav-item d-block me-2">
@@ -38,15 +30,12 @@
                                 <ion-icon class="me-1" name="home-outline"></ion-icon> About
                             </a>
                         </li>
-
                         <li class="nav-item d-block me-2">
                             <a href="#instruction" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="pencil-outline"></ion-icon> Instruction</a>
                         </li>
-
                         <li class="nav-item d-block me-2">
                             <a href="#download" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="download-outline"></ion-icon> Download, Installation &amp; Development</a>
                         </li>
-
                         <li class="nav-item d-block me-2">
                             <a href="#team" class="nav-link d-flex align-items-center"> <ion-icon name="people-circle-outline"></ion-icon> Team</a>
                         </li>
@@ -57,74 +46,51 @@
         </div>
     </nav>
      <!-- End of Header  -->
-
-
     <!-- Heading -->
     <p class="top my-5">Graph Interface</p>
-
     <section id="home">
-        <div class="container my-5">
-            
+        <div class="container my-5">      
             <!-- About -->
-            <div id="about">
-                
+            <div id="about">         
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
                     About the Project&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
-                </a>
-               
+                </a>           
                 <p class="text-justify">
                 Graph Interface is an open-source analysis tool based on the desktop environment. It can be used as individual analysis software and interface library. This software helps the user visualize and statistically analyze data based on inserted information. From a small set of values to big data, our Graph Interface software can analyze any numbers and visualize the information on the graph frame. We use our set range compression algorithm, which helps the software compress complete data inside the graph frame. The control panel uses statistical evaluation functions to get basic analytics. We stumbled upon many situations where we realized the importance of graphical data analysis and an automated system to help with the process. That is why we came up with this system for helping the labs or any institution that needs automation for statistical analysis and has an open development environment (open-source code). This software contains primary tools and has the potential for further development. Read development instruction for getting started.
                 </p>
-
             </div>
-
             <!-- Manual -->
             <div id="instruction">
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
                     Instructions Manual&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
-                </a>
-            
+                </a>       
                 <p class="text-justify">
                     <b>Data Input</b> <br> <br>
                 Graph Interface is an open-source analysis tool based on the desktop environment. It can be used as individual analysis software and interface library. This software helps the user visualize and statistically analyze data based on inserted information. From a small set of values to big data, our Graph Interface software can analyze any numbers and visualize the information on the graph frame. We use our set range compression algorithm, which helps the software compress complete data inside the graph frame. The control panel uses statistical evaluation functions to get basic analytics. We stumbled upon many situations where we realized the importance of graphical data analysis and an automated system to help with the process. That is why we came up with this system for helping the labs or any institution that needs automation for statistical analysis and has an open development environment (open-source code). This software contains primary tools and has the potential for further development. Read development instruction for getting started.
                 </p>
-
-                <img src="./website/resources/main/assets/text-file.png" class="mx-auto d-block img-fluid" alt="data-input">
-            
+                <img src="./website/resources/main/assets/text-file.png" class="mx-auto d-block img-fluid" alt="data-input">      
                 <code class="text-primary">QUANTITY[<span class="text-danger">the number of inputs in x/y</span>]</code>
                 <p>Type the number of values in x & y. The number you type = quantity x = quantity y.</p>
-
                 <br>
-
                 <code class="text-primary">X[<span class="text-danger">What X represents</span>]</code>
                 <p>Type what x-axis represents in your data.</p>
-
                 <br>
-
                 <code class="text-primary">X[<span class="text-danger">values of x</span>]</code>
                 <p>Type the numeric values of the x-axis separated by a comma (,).</p>
-
                 <br>
-
                 <code class="text-primary">Y[<span class="text-danger">What Y represents</span>]</code>
                 <p>Type the numeric values of the y-axis separated by a comma (,).</p>
-
                 <code class="text-primary">Y[<span class="text-danger">values of y</span>]</code>
                 <p>Type the numeric values of the y-axis separated by a comma (,).</p>
-
-                <p class="text-danger"> <b>  Note: </b> Make sure the file name is dataset.txt & brackets before and after your inputs.</p>
-                
+                <p class="text-danger"> <b>  Note: </b> Make sure the file name is dataset.txt & brackets before and after your inputs.</p>                
                 <br>
-
                 <p><b>Analysis</b></p>
                 <p>The interface contains two parts to help you analyze the data: the graphical representation and the information panel. The graph panel is a single line display where your provided value gets displayed. Here the vertical line represents the y-axis and the horizontal line represents the x-axis.</p>
                 
                 <img src="./website/resources/main/assets/interface.png" class="mx-auto d-block img-fluid" alt="data-input" width="80%">
-
                 <br>
                 <br>
                 <br>
-
                 <!-- Table -->
                 <div id="table">
                     <div class="row">
@@ -137,7 +103,6 @@
                             It displays the mean value of the x-axis.<br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>x represents:</code><br>
@@ -148,7 +113,6 @@
                             It displays the mean value of the y-axis.<br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>y represents:</code><br>
@@ -163,7 +127,6 @@
                             If the values are same: Stable.<br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Max(x):</code><br>
@@ -178,7 +141,6 @@
                             If the values are same: Stable.<br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Mix(x):</code><br>
@@ -189,7 +151,6 @@
                             It displays the total value in the x-axis. <br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Max(y):</code><br>
@@ -200,7 +161,6 @@
                             It displays the total value in the y-axis. <br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Min(y):</code><br>
@@ -211,7 +171,6 @@
                             It displays the summation of all values in x-axis. <br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Med(x):</code><br>
@@ -222,7 +181,6 @@
                             It displays the summation of all values in y-axis. <br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>Med(y):</code><br>
@@ -233,7 +191,6 @@
                             It is extra space for the user if they want to add something extra. <br><br>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <code>FILE TEST:</code><br>
@@ -246,27 +203,19 @@
                     </div>
                 </div>
                 <!-- Table - end -->
-
             </div>
-
             <!-- Instruction - end  -->
-
-            <div id="download">
-               
+            <div id="download">    
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
                     Download, Installation & Development Instruction&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
                 </a>
-
                 <p>The installation process is pretty simple. We recommend you use the Java file installation link. Create a project on your compiler and use GUI.java & Process.java files. Run GUI.java and make sure you have included the provided dataset.txt file outside of src. This software is open-source for all non-commercial use. Modify according to your needs and let us know if you need any extra features that may help in the research process. We do not permit anyone to use this project for any commercial purpose. While developing, please do not change the version number and year.</p>
 
                 <img src="./website/resources/main/assets/java-file.png" class="mx-auto d-block" alt="data-input">
-
                 <div class="text-center">
                     <a target="_blank" href="https://jayedrafi.com/graph-interface/download/gi-software.zip" class="btn btn-success my-5 d-inline-block">Download (Java file with txt version 1.0) <ion-icon name="cloud-download-outline"></ion-icon> </a>
-                </div>
-                
+                </div>        
                 <br>
-
                 <!-- Video -->
                 <div class="d-flex justify-content-center my-5">
                     <iframe width="800px" height="410px" src="https://www.youtube.com/embed/nywFxN3id1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -275,10 +224,7 @@
         
         </div>
     </section>
-
-
     <br><br><br>
-
     <section id="team">
         <div class="container my-5">
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
@@ -300,9 +246,7 @@
                     <a class="text-light mt-2 btn btn-dark" href="https://github.com/JayedRafiProjects" target="_blank"> <ion-icon name="logo-github"></ion-icon></a>
                     <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jayed-rafi/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a>
                         </div>
-                    </div>
-                   
-
+                    </div>  
                 </div>
             </div>
             <!-- End of 1st Profile -->
@@ -323,30 +267,18 @@
                     <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jashan7/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a>
                             </div>
                         </div>
-
-                    
-
                 </div>
             </div>
             <!-- End of 2nd Profile -->
                         </div>
              </div>
-
-
-
-
-
-
         </div>
     </section>
-
     <section id="news">
         <div class="container">
-
             <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
                 News and Updates&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
             </a>
-
             <div class="single-news">
                 <b>14 February 2022 - Web Update: </b> 
                 <p class="content">
@@ -359,7 +291,6 @@
             </div>
         </div>
     </section>
-
     <!-- Start of Footer  -->
     <footer class="bg-dark d-flex flex-wrap justify-content-between bg-light align-items-center my-4">
         <div class="container text-center">     
@@ -370,12 +301,8 @@
                 <br/>
                 This work is licensed under a <a id="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
             </div>
-
         </div>
-
-        
     </footer>
     <!-- End of Footer  -->
-
 </body>
 </html>

@@ -27,11 +27,11 @@
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center flex-direction-column">
-                <a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
-                     <img alt="logo" src="./website/resources/main/assets/graphinterface_logo.png">
-                </a>
+                <!--<a id="logo" class="navbar-brand text-info ms-md-5" href="index.html"> 
+                     <img alt="logo" src="./website/resources/main/assets/logo.png">
+                </a>-->
 
-                <div class="collapse navbar-collapse text-center mt-2 mt-md-0 py-3 pb-5 my-4" id="navbarColor01">
+                <div class="collapse navbar-collapse text-center mt-2 mt-md-0" id="navbarColor01">
                     <ul class="navbar-nav ms-auto d-flex flex-wrap">
                         <li class="nav-item d-block me-2">
                             <a href="#about" class="nav-link active d-flex align-items-center"> 
@@ -44,11 +44,11 @@
                         </li>
 
                         <li class="nav-item d-block me-2">
-                            <a href="#download" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="download-outline"></ion-icon> Download, Installation & Development</a>
+                            <a href="#download" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="download-outline"></ion-icon> Download, Installation &amp; Development</a>
                         </li>
 
                         <li class="nav-item d-block me-2">
-                            <a href="#team" class="nav-link d-flex align-items-center"> <ion-icon class="me-1" name="cloud-download-outline"></ion-icon> Team</a>
+                            <a href="#team" class="nav-link d-flex align-items-center"> <ion-icon name="people-circle-outline"></ion-icon> Team</a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
             <div id="about">
                 
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
-                    About the Project <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
+                    About the Project&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
                 </a>
                
                 <p class="text-justify">
@@ -81,7 +81,7 @@
             <!-- Manual -->
             <div id="instruction">
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
-                    Instructions Manual <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
+                    Instructions Manual&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
                 </a>
             
                 <p class="text-justify">
@@ -119,7 +119,7 @@
                 <p><b>Analysis</b></p>
                 <p>The interface contains two parts to help you analyze the data: the graphical representation and the information panel. The graph panel is a single line display where your provided value gets displayed. Here the vertical line represents the y-axis and the horizontal line represents the x-axis.</p>
                 
-                <img src="./website/resources/main/assets/interface.png" class="mx-auto d-block img-fluid" alt="data-input">
+                <img src="./website/resources/main/assets/interface.png" class="mx-auto d-block img-fluid" alt="data-input" width="80%">
 
                 <br>
                 <br>
@@ -254,7 +254,7 @@
             <div id="download">
                
                 <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
-                    Download, Installation & Development Instruction <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
+                    Download, Installation & Development Instruction&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
                 </a>
 
                 <p>The installation process is pretty simple. We recommend you use the Java file installation link. Create a project on your compiler and use GUI.java & Process.java files. Run GUI.java and make sure you have included the provided dataset.txt file outside of src. This software is open-source for all non-commercial use. Modify according to your needs and let us know if you need any extra features that may help in the research process. We do not permit anyone to use this project for any commercial purpose. While developing, please do not change the version number and year.</p>
@@ -281,49 +281,61 @@
 
     <section id="team">
         <div class="container my-5">
-            <p class="top">Meet us</p>
-            
+                <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
+                    Team&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
+                </a>
+            <div class="row" style="border: none">
+                        <div class="col" style="border: none">
             <!-- Start of 1st Profile -->
-            <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+            <div class="row profile mt-5 bg-color bg-light p-4">
 
                 <div class="mt-5">
                     <div class="d-flex">
-                        <img class="me-5" src="./website/resources/main/assets/jayed_profile.jfif" alt="jayed-rafi" srcset="">
+                        <img class="me-5" src="./website/resources/main/assets/jayed_profile.jfif" alt="jayed-rafi" style="width: 150px; height: 150px;">
                         <div class="mt-2">
                             <h3>Jayed Rafi</h3> <small></small>
-                            <p class="lead text-left">Software Development (jayedrafi@outlook.com)</p>
+                            <p class="lead text-left">Software Development</p>
+							<p><a href="mailto:jayedrafi@outlook.com">Email: jayedrafi@outlook.com</a></p>
+					<a class="text-light mt-2 btn btn-success" href="https://jayedrafi.com/" target="_blank"> <ion-icon name="person-outline"></ion-icon></a>
+                    <a class="text-light mt-2 btn btn-dark" href="https://github.com/JayedRafiProjects" target="_blank"> <ion-icon name="logo-github"></ion-icon></a>
+                    <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jayed-rafi/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a>
                         </div>
                     </div>
                    
-                    <a class="text-light mt-2 btn btn-success" href="https://jayedrafi.com/" target="_blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> </a>
-                    <a class="text-light mt-2 btn btn-dark" href="https://github.com/JayedRafiProjects" target="_blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> </a>
-                    <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jayed-rafi/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> </a>
-                    <a class="text-light mt-2 btn btn-secondary text-dark" href = "mailto: jayedrafi@outlook.com"> <ion-icon name="mail-outline"></ion-icon> <span class="mx-1">Email</span> </a>
+
                 </div>
             </div>
             <!-- End of 1st Profile -->
-
-
+                        </div>
+                        <div class="col" style="border: none">
             <!-- Start of 2nd Profile -->
-            <div class="row profile mt-5 bg-color bg-light bordered-10 p-4">
+            <div class="row profile mt-5 bg-color bg-light  p-4">
                
                 <div class="mt-5">
                     <div class="d-flex">
-                            <img class="me-5" src="./website/resources/main/assets/jashan_profile.jfif" alt="jashan-gill" srcset="">
+                            <img class="me-5" src="./website/resources/main/assets/jashan_profile.jfif" alt="jashan-gill" style="width: 150px; height: 150px;">
                             <div class="mt-2">
                                 <h3>Jashanjot Singh Gill</h3>
-                                <p class="lead text-left">Web Development (jashangill3592@gmail.com) </p>
+                                <p class="lead text-left">Web Development</p>
+								<p ><a href="mailto:jashangill3592@gmail.com">Email: jashangill3592@gmail.com</a></p>
+					<a class="text-light mt-2 btn btn-success" href="https://jashann.github.io" target="_blank"> <ion-icon name="person-outline"></ion-icon></a>
+                    <a class="text-light mt-2 btn btn-dark" href="https://github.com/Jashann" target="_blank"> <ion-icon name="logo-github"></ion-icon></a>
+                    <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jashan7/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a>
                             </div>
                         </div>
 
                     
-                        <a class="text-light mt-2 btn btn-success" href="https://jashann.github.io" target="_blank"> <ion-icon name="person-outline"></ion-icon> <span class="mx-1">Portfolio</span> </a>
-                        <a class="text-light mt-2 btn btn-dark" href="https://github.com/Jashann" target="_blank"> <ion-icon name="logo-github"></ion-icon> <span class="mx-1">Github</span> </a>
-                        <a class="text-light mt-2 btn btn-info" href="https://www.linkedin.com/in/jashan7/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon> <span class="mx-1">Linked In</span> </a>
-                        <a class="text-light mt-2 btn btn-secondary text-dark" href = "mailto: jashangill3592@gmail.com"> <ion-icon name="mail-outline"></ion-icon> <span class="mx-1">Email</span> </a>
+
                 </div>
             </div>
             <!-- End of 2nd Profile -->
+                        </div>
+             </div>
+
+
+
+
+
 
         </div>
     </section>
@@ -332,7 +344,7 @@
         <div class="container">
 
             <a href="#main-navbar" class="bg-light bordered-10 mb-3 p-3 mt-5 heading heading-font">
-                News and Updates <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
+                News and Updates&nbsp;&nbsp;<ion-icon size="large" name="arrow-up-circle-outline"></ion-icon> 
             </a>
 
             <div class="single-news">

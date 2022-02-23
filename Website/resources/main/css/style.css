@@ -116,6 +116,9 @@ li {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+#main-navbar a {
   padding: 15px;
 }
 
@@ -230,6 +233,12 @@ footer,
 @media (max-width: 1162px) {
   #home img {
     width: 70%;
+  }
+}
+
+@media (max-width: 1015px) {
+  #team .row {
+    flex-direction: column;
   }
 }
 
